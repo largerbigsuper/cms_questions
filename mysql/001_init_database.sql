@@ -1,0 +1,2 @@
+CREATE DATABASE cms_questions_db DEFAULT CHARACTER SET utf8mb4;
+

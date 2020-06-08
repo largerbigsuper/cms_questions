@@ -1,0 +1,11 @@
+# MySQL
+# ------------------------------------------------------------------------------
+DB_HOST=mysql
+DB_PORT=3306
+DB_NAME=sucai_db_production
+DB_USER=root
+DB_PASSWORD=888888
+
+
+MYSQL_DATABASE=sucai_db_production
+MYSQL_ROOT_PASSWORD=888888

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# 先删除logs/celery_beat.log
+if [ -f logs/celery_beat.log ]
+then 
+    rm logs/celery_beat.log
+fi
+
+celery -A server beat -l info --logfile=logs/celery_beat.log --pidfile=

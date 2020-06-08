@@ -1,0 +1,37 @@
+version: "2"
+
+services:
+  
+  redis:
+    image: redis:5.0
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  mysql:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=2000
+    expose:
+      - "3306"
+    ports:
+      - 33306:3306
+    env_file:
+      - ./.envs/.production/.mysql
+
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/production/django/Dockerfile
+    image: django_cms_production
+    volumes:
+      - .:/app
+    env_file:
+      - ./.envs/.production/.django
+      - ./.envs/.production/.mysql
+    ports:
+      - 9003:8000
+    command: ["/start"]
+    depends_on:
+      - mysql
+      - redis
+
+
