@@ -2,9 +2,9 @@
 # ------------------------------------------------------------------------------
 DB_HOST=mysql
 DB_PORT=3306
-DB_NAME=sucai_db_dev
+DB_NAME=cms_questions_db_dev
 DB_USER=root
 DB_PASSWORD=888888
 
-MYSQL_DATABASE=sucai_db_dev
+MYSQL_DATABASE=cms_questions_db_dev
 MYSQL_ROOT_PASSWORD=888888
