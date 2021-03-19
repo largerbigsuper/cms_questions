@@ -29,7 +29,7 @@ pycryptodome==3.9.4
 
 # rest framework
 django-filter==2.2.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 django-crispy-forms==1.8.1
 
 # deploy
